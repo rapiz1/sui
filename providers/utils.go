@@ -12,7 +12,7 @@ const (
 
 func (app *App) fixURL() {
 	if !(strings.HasPrefix(app.URL, "https://") || strings.HasPrefix(app.URL, "http://")) {
-		app.URL = fmt.Sprintf("https://%s", app.URL)
+		app.URL = fmt.Sprintf("//%s", app.URL)
 	}
 }
 
